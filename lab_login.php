@@ -1,5 +1,7 @@
 <?php include 'connection.php' ?>
-
+<!--<?php $SESSION['user'];
+        $SESSION['pass'];
+?>-->
 <!doctype HTML>
 <html>
     <head>
