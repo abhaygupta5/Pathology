@@ -1,0 +1,42 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+#nav-bar{
+    height:80px;
+  
+}
+.login{
+    float:right;
+    
+    margin:35px 60px;
+}
+.login a{
+    text-decoration: none;
+    font-size:30px;
+    color:white;
+    font-weight:bold;
+}
+.login a:hover{
+    color:black;
+    font-weight:bold;
+    background-color:aqua;
+    padding:35px 60px;
+}
+header{
+    
+    border-bottom:2px solid grey;
+    position:fixed;
+    width:100%;
+    background-color:red;
+}
+#logo{
+ 
+    float:left;
+    
+    
+}
+#container{
+    padding-top:150px;
+}

@@ -1,5 +1,7 @@
 <?php include 'connection.php' ?>
-
+<!--<?php $SESSION['user'];
+        $SESSION['pass'];
+?>-->
 <!doctype HTML>
 <html>
     <head>
@@ -14,5 +16,12 @@
                 <div class="login"><a href="sorter_login.php">Tester Login</a></div>
             </div>
         </header>
+        <div id="container">
+            <form method="POST" action="lab.php">
+            <label for user>Username: <input type="text" name="user" placeholder="username" /></label><br><br>
+            <label for pass>Password: <input type="password" name="pass" /></label><br><br>
+                <input type="Submit" value="Log In" name="login" />
+            </form>
+        </div>
     </body>
 </html>
