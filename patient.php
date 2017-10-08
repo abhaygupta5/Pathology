@@ -6,7 +6,7 @@
     $pass=mysqli_real_escape_string($con,$_POST['pass']);
     
 
-    $query="SELECT Aadhar_id,Password FROM Patient WHERE AES_DECRYPT(Password,'AbhayGuptaPathologyLab')='$pass'";
+    $query="SELECT Aadhar_id,Password FROM Patient WHERE AES_DECRYPT(Password,'AbhayGuptaPathologyLab')='$pass' And Aadhar_id='$user'";
     if(!mysqli_query($con,$query)){
         $message1="<font color=red>invalid user id  or password....new user first sign in</font>";
         echo $message1;
