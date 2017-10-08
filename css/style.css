@@ -40,3 +40,10 @@ header{
 #container{
     padding-top:150px;
 }
+
+.anchor{
+    text-decoration: none;
+    font-size:25px;
+    font-weight:bold;
+    color:black;
+}

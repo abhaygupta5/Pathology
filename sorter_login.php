@@ -1,5 +1,8 @@
 <?php include 'connection.php' ?>
-
+<?php 
+    session_start();
+    $_SESSION['auth']=0;
+?>
 <!doctype HTML>
 <html>
     <head>
@@ -15,7 +18,7 @@
             </div>
         </header>
          <div id="container">
-            <form method="POST" action="sorter.php">
+            <form method="POST" action="sorter_process.php">
             <label for user>Username: <input type="text" name="user" placeholder="username" /></label><br><br>
             <label for pass>Password: <input type="password" name="pass" /></label><br><br>
                 <input type="Submit" value="Log In" name="login" />
