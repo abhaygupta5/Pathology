@@ -102,6 +102,9 @@
 </nav>
          </div>
 <div id="allreport">
+
+
+
         <form method="POST" action="patient.php"> 
              <h3>View all your reports</h3>
 
@@ -110,12 +113,12 @@
 
   <div class="form-group">
     <label for="exampleInputEmail1" class="formkalabel">Aadhar Card ID</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Aadhar Card ID">
+    <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter Aadhar Card ID" name='user' length="12"  >
     <small id="emailHelp" class="form-text text-muted">We'll never share your Aadhar ID with anyone else.</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1" class="formkalabel">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass">
   </div>
   
 
