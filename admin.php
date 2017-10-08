@@ -45,14 +45,27 @@
             <div>
                 <a href="admin" class="anchor">Admin</a><br>
                 <h3>Change Password</h3>
-                <input type="text">
+                <input type="text" id="admin_text">
                 <button id="admin">Change Password</button>
             </div>
+            <br><br>
             
             <div>
                 <a href="employee" class="anchor">Employee</a><br>
+                <div class="main" style="background-color:green;width:20%;float:left;"><h3>Add</h3>
+                    Name: <input type="text"><br>
+                    DOB: <input type="date"><br>
+                </div>
+                <div class="main" style="background-color:yellow;width:20%;float:left;"><h3>Update</h3>
+                    Name: <input type="text"><br>
+                    DOB: <input type="date"><br>
+                </div>
+                <div class="main" style="background-color:blue;width:20%;float:left;"><h3>Delete</h3>
+                    Name: <input type="text"><br>
+                    DOB: <input type="date"><br>
+                </div>
             </div>
-            
+            <br><br><br><br><br><br>
             <div>
                 <a href="lab" class="anchor">Lab</a><br>
             </div>
@@ -78,5 +91,21 @@
             </div>
            
         </div>
+        
+        <script type="text/javascript">
+            
+            document.getElementById("admin").onclick=function(){
+                var pass=document.getElementById("admin_text").value;
+                if(pass.length<8){
+                    alert("Minimum length of password should be 8");
+                }
+                
+                else{
+                    window.location.replace('queries/admin_pass.php?pass='+pass);
+                }
+                    
+            };
+        
+       </script>
     </body>
 </html>
