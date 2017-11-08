@@ -8,7 +8,7 @@
     $_SESSION['dob']=$_POST['dob'];
     
    
-    if(isset($_SESSION['aadhar']) && isset($_SESSION['pass']) && $_SESSION['aadhar']!="" && $_SESSION['pass']!="" && isset($_SESSION['cpass']) && $_SESSION['cpass']!="" && isset($_SESSION['dob']) && $_SESSION['dob']!="" && $_SESSION['auth']==0){
+   if(isset($_SESSION['aadhar']) && isset($_SESSION['pass']) && $_SESSION['aadhar']!="" && $_SESSION['pass']!="" && isset($_SESSION['cpass']) && $_SESSION['cpass']!="" && isset($_SESSION['dob']) && $_SESSION['dob']!="" && $_SESSION['auth']==0){
         
         $_SESSION['auth']=1;
         $aadhar=mysqli_real_escape_string($con,$_SESSION['aadhar']);
@@ -16,21 +16,27 @@
         $pass=mysqli_real_escape_string($con,$_SESSION['pass']);
         $cpass=mysqli_real_escape_string($con,$_SESSION['cpass']);
         $dob=mysqli_real_escape_string($con,$_SESSION['dob']);
+       
+       
+       /* Date to required format */
+        $time=strtotime($dob);
+        $dob=date('Y-m-d',$time);
+        echo $dob;
 
 
-        $query="SELECT Aadhar_id,DOB FROM patient where Aadhar_id='$aadhar' AND DOB='$dob' ;";
+        $query="SELECT Aadhar_id,DOB FROM patient where Aadhar_id='$aadhar' AND DOB=STR_TO_DATE('$dob','%Y-%m-%d');";
         if(!mysqli_query($con,$query)){
             
             session_unset();
             session_destroy();
-            header("Location: index.php");
+            header("Location: sign_up.php");
             exit();
         }
         else{
             $t=0;
         $result=mysqli_query($con,$query);
         while($a=mysqli_fetch_assoc($result)){
-            if($_SESSION['aadhar']==$a['Aadhar_id'] && $_SESSION['dob']==$a['DOB'] && $_SESSION['pass']==$_SESSION['cpass']){
+            if($_SESSION['aadhar']==$a['Aadhar_id'] && $dob==$a['DOB'] && $_SESSION['pass']==$_SESSION['cpass']){
                 $t=1;
                 $query="UPDATE patient SET Password=AES_ENCRYPT('$pass','AbhayGuptaPathologyLab') WHERE Aadhar_Id=$aadhar;";
                 mysqli_query($con,$query);
@@ -45,7 +51,7 @@
             if($t==0){
                 session_unset();
                 session_destroy();
-                header("Location: index.php");
+                header("Location: sign_up.php");
                 exit();
             
             }
@@ -54,7 +60,7 @@
 else{
     session_unset();
     session_destroy();
-    header("Location: index.php");
+    header("Location: sign_up.php");
     exit();
     
 }

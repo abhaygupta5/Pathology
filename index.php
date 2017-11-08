@@ -10,12 +10,15 @@
         CB Pathology
         </title>
          <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/animate.css" rel="stylesheet" type="text/css">
         <link href="css/custom.css" rel="stylesheet" type="text/css">
+        <link href="css/1140.css" rel="stylesheet" type="text/css">
         <script src="js/bootstrap.js" type="text/javascript"></script>
          <script src="carouselengine/jquery.js"></script>
     <script src="carouselengine/amazingcarousel.js"></script>
     <link rel="stylesheet" type="text/css" href="carouselengine/initcarousel-1.css">
     <script src="carouselengine/initcarousel-1.js"></script>
+        
         <style>
         body{
             margin:0;
@@ -26,12 +29,15 @@
             }
         .main-image{
             width : 35%;
+            -webkit-animation-delay:0.5s;
+            -moz-animation-delay:0.5s;
         }
         .btn-group{
             float:inherit;
             margin-left:75%;
             margin-top:1%;
-    
+           -webkit-animation-delay:1.5s;
+            -moz-animation-delay:1.5s;
         }
         .data{
         
@@ -49,30 +55,11 @@
  
 
  
-        .horizontal{
-            width:100%;
-            height:1px;
-            background: #000000;
         
-            margin-bottom: 10%;
-        }
 
      
 
-        #horiline2{
-            height:1px;
-            width:100%;
-            background:#000000;
-            margin-top:4%;
-            margin-bottom: 8%;
-        }
-        #horiline3{
-            height:1px;
-            width:100%;
-            background:#000000;
-            margin-top:8%;
-            
-        }
+       
         .peoplesay{
             margin-top:2%;
         }
@@ -610,12 +597,65 @@
                 border:4px solid black;
                 margin-top:10%;
                 margin-left:20%;
-                padding: 35px;
-                padding-bottom:40px;
+                padding: 45px;
+                padding-bottom:47px;
+                
+            
             }
             .healthpackage{
                 margin-top: 20%;
             }
+            .navbar-brand{
+                -webkit-animation-delay:2s;
+                 -moz-animation-delay:2s;
+            }
+            .col-sm-5{
+                -webkit-animation-delay:1.75s;
+                -moz-animation-delay:1.75s;
+            }
+            .col-sm-7{
+                -webkit-animation-delay:2.25s;
+                -moz-animation-delay:2.25s;
+            }
+            .container{
+                -webkit-animation-delay:1s;
+                -moz-animation-delay:1s;
+            }
+            .headinghell{
+                -webkit-animation-delay:1.5s;
+                -moz-animation-delay:1.5s;
+                margin-bottom:3%;
+            }
+            .formkalabel{
+                margin-top:2%;
+            }
+     
+           /* .skewnow{
+                position:relative;
+                width:100%;
+                height:250px;
+                background:#01579B;
+                z-index: -1;
+            }
+            .skewnow:after{
+                float:right;
+                position:absolute;
+                width:100%;
+                height: 100%;
+                top:0px;
+                bottom:0px;
+                right:0px;
+                left:0px;
+                content:'';
+                background: inherit;
+                transform-origin: top left;
+                transform: skewY(4deg);
+                opacity: 0.3;
+    filter: alpha(opacity=30);
+            }
+            */
+  
+            
         </style>
         
     </head>
@@ -624,32 +664,32 @@
 
 
 
-   <div class="main-image" style="float:left;">
+   <div class="main-image animated flipInX" style="float:left;">
        <a href="index.php"><img src="images/logo.JPG"></a>;
     </div>
          
-<div class="btn-group" role="group" aria-label="Basic example" style="top:-80px;">
+<div class="btn-group animated zoomInDown" role="group" aria-label="Basic example" style="top:-80px;">
     <button type="button" onclick="window.location.href='lab_login.php'" class="btn btn-secondary"><span class="b">Lab Login</span></button>
     <button type="button" onclick="window.location.href='sorter_login.php'" class="btn btn-secondary"><span class="b">Tester Login</span></button>
 </div>
   <div id="na">
-    <nav class="navbar navbar-inverse" style="background-color:black;">
+    <nav class="navbar navbar-inverse animated slideInLeft" style="background-color:black;">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       
-        <a class="navbar-brand" href="#"><span class="data">Patient</span></a>
-        <a class="navbar-brand" href="#"><span class="data">Book Test</span></a>
-        <a class="navbar-brand" href="#"><span class="data">Test List</span></a>
-        <a class="navbar-brand" href="#"><span class="data">Contact us</span></a>
+        <a class="navbar-brand animated tada" href="#"><span class="data">Patient</span></a>
+        <a class="navbar-brand animated tada" href="#"><span class="data">Book Test</span></a>
+        <a class="navbar-brand animated tada" href="#"><span class="data">Test List</span></a>
+        <a class="navbar-brand animated tada" href="#"><span class="data">Contact us</span></a>
       </div>
   </div>
 </nav>
 </div>
-       
+         
 
 <div class="row">
-  <div class="col-sm-5">
+  <div class="col-sm-5 animated flipInY">
     <div id="allreport">
          <form>
              <h3>View all your reports</h3>
@@ -668,7 +708,7 @@
 </div>
     
     </div>
-  <div class="col-sm-7">
+  <div class="col-sm-7 animated flipInX">
    <div id="amazingcarousel-container-1" style="height:60VH">
     <div id="amazingcarousel-1" style="display:none;position:relative;width:100%;max-width:520px;margin:0px auto 0px;">
         <div class="amazingcarousel-list-container">
@@ -695,11 +735,12 @@
 </div>
     </div>
 </div>
+         <div class="skewnow"></div>
                   <div class="healthpackage">
                       <div class="horizontal"></div>
-         <h1 align="center">Health Packages</h1>
-         
- <div class="container">
+         <h1 align="center" class="headinghell animated bounceInDown">Health Packages</h1>
+         <div class="skewnow2">
+ <div class="container animated lightSpeedIn">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
@@ -721,13 +762,13 @@
             <h4>&#8377; 1799</h4>
         </div>
       </div>
-
+             </div>
                       </div>
          </div>
          
          <div id="horiline2"></div>
          
-        
+         <div class="skewnow1"></div>
          <div class="peoplesay">
 <h1>What People say about us</h1>
 
@@ -762,6 +803,7 @@
               
          </div>
          
+         
          <div id="horiline3"></div>
          
          <div class="fot">
@@ -779,8 +821,7 @@
              <span class="fot2con">&copy; 2017 CodeBros Pathology. All Rights Reserved. <br></span>
              <span class="fot2con">Only Pathology Reports Available online.<br></span><span class="fot2con"> For X-Ray,Ultrasound,ECG,TMT reports- please visit the concerned center where the test has been conducted.</span>
          </div>
-         
-         
+   
          
          
          

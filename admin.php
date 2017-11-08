@@ -68,6 +68,25 @@
             <br><br><br><br><br><br>
             <div>
                 <a href="lab" class="anchor">Lab</a><br>
+                <div class="main" style="background-color:green;width:20%;float:left;"><h3>Add</h3>
+                    Street Name* : <input type="text" id="lsn1" required><br>
+                    City* : <input type="text" id="lc1" required><br>
+                    Pincode* : <input type="text" id="lp1" required pattern="[0-9]"><br>
+                    Password* : <input type="text" id="lpass1" required><br>
+                    <button id="l1">Add</button>
+                </div>
+                <div class="main" style="background-color:yellow;width:20%;float:left;"><h3>Update</h3>
+                    Lab id* : <input type="text" id="ll2" required><br>
+                    Street Name : <input type="text" id="lsn2" required><br>
+                    City : <input type="text" id="lc2" required><br>
+                    Pincode : <input type="text" id="lp2" required pattern="[0-9]"><br>
+                    Password : <input type="text" id="lpass2" required><br>
+                    <button id="l2">Update</button>
+                </div>
+                <div class="main" style="background-color:blue;width:20%;float:left;"><h3>Delete</h3>
+                    Lab id* : <input type="text" id="ll3" required><br>
+                    <button id="l3">Delete</button>
+                </div>
             </div>
             
             <div>
@@ -103,7 +122,55 @@
                 else{
                     window.location.replace('queries/admin_pass.php?pass='+pass);
                 }
-                    
+            };
+            
+            document.getElementById("l1").onclick=function(){
+                var pass=document.getElementById("lpass1").value;
+                var street=document.getElementById("ls1").value;
+                var city=document.getElementById("lc1").value;
+                var pin=document.getElementById("lp1").value;
+                if(pass.length<8){
+                    alert("Minimum length of password should be 8");
+                }
+                
+                else{
+                    window.location.replace('queries/lab_add.php?pass='+pass+'&street='+street+'&city='+city+'&pin='+pin);
+                }
+            };
+            
+            document.getElementById("l2").onclick=function(){
+                var lid=document.getElementById("ll2").value;
+                var pass=document.getElementById("lpass2").value;
+                var street=document.getElementById("ls2").value;
+                var city=document.getElementById("lc2").value;
+                var pin=document.getElementById("lp2").value;
+                var str="";
+                if(pass.length!=0 && pass.length>=8){
+                    str+=("pass="+$pass+"&");
+                }
+                else{
+                    window.alert("Minimum length of password should be 8");
+                }
+                if(street!=""){
+                    str+=("street="+$street+"&");
+                }
+                if(city!=""){
+                    str+=("city="+$city+"&");
+                }
+                if(pin!=""){
+                    str+=("pin="+$pin+"&");
+                }
+                if(str!=""){
+                    str=str.substring(0,str.length-1);
+                    window.location.replace('queries/lab_update.php?'+str);
+                }
+            };
+            
+            document.getElementById("l3").onclick=function(){
+                var lid=document.getElementById("ll2").value;
+                if(lid!=""){
+                    window.location.replace('queries/lab_delete.php?lid='+lid);
+                }
             };
         
        </script>
