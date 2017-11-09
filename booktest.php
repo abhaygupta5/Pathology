@@ -3,7 +3,6 @@
     session_start();
     $_SESSION['auth']=0;
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -582,7 +581,7 @@
                 float: inherit;
             }
             .row{
-                height:60VH;
+                height:15VH;
                 width:100%;
                 background:#FFFFFF;
             }
@@ -621,7 +620,7 @@
                 margin-bottom:3%;
             }
             .formkalabel{
-            
+                margin-top:2%;
             }
      
            /* .skewnow{
@@ -648,20 +647,31 @@
     filter: alpha(opacity=30);
             }
             */
-            .form-group{
-                margin:-15px 0;
+            .fhead{
+                font-size: 140%;
             }
-            
+            #mainh{
+                margin-bottom: 3%;
+                margin-top:1%;
+            }
+            .book{
+                -webkit-animation-delay:1.5s;
+                -moz-animation-delay:1.5s;
+            }
+            .mainbut{
+                margin-top:4%;
+                font-size:150%;
+                
+            }
         </style>
         
     </head>
         
-     <body>
-
-
-
-   <div class="main-image animated flipInX" style="float:left;">
-       <a href="index.php"><img src="images/logo.JPG"></a>
+    <body>
+    
+    
+     <div class="main-image animated flipInX" style="float:left;">
+       <a href="index.php"><img src="images/logo.JPG"></a>;
     </div>
          
 <div class="btn-group animated zoomInDown" role="group" aria-label="Basic example" style="top:-80px;">
@@ -682,95 +692,178 @@
   </div>
 </nav>
 </div>
-         
-
-<div class="row">
-  <div class="col-sm-5 animated flipInY">
-    <div id="allreport">
-         <form action="sign_up_process.php" method="POST">
-             <h3>Sign Up</h3>
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="formkalabel">Aadhar Card ID *</label>
-    <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter Aadhar Card ID" pattern="[0-9]{12}" name="aadhar">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your Aadhar ID with anyone else.</small>
-  </div>
-             <div class="form-group">
-    <label for="exampleDate" class="formkalabel">Date of Birth *</label>
-    <input type="date" class="form-control" name="dob" id="exampleDate" placeholder="DOB">
-  </div>
-             <div class="form-group">
-    <label for="exampleInputPassword1" class="formkalabel">Password *</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass">
-  </div>
-             
-  <div class="form-group">
-    <label for="exampleInputPassword2" class="formkalabel">Confirm Password *</label>
-    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password" name="cpass">
-  </div>
-  
-<button type="submit" class="btn btn-primary" id="formbutton">Sign Up</button>
-</form>
-</div>
-    
+        
+        
+        <div class="book animated flipInY">
+            <h1 align="center" id="mainh">Fill Details to Book Test</h1>
+              <form class="container" id="needs-validation" novalidate method="post" action="booktest_process.php">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom01" class="fhead">Aadhar Id *</label>
+      <input type="text" class="form-control" id="validationCustom01" pattern="[0-9]{12}" title="Enter 12 digit aadhar id" placeholder="Aadhar Id" name="aadhar" required>
     </div>
-  <div class="col-sm-7 animated flipInX">
-   <div id="amazingcarousel-container-1" style="height:60VH">
-    <div id="amazingcarousel-1" style="display:none;position:relative;width:100%;max-width:520px;margin:0px auto 0px;">
-        <div class="amazingcarousel-list-container">
-            <ul class="amazingcarousel-list">
-                <li class="amazingcarousel-item">
-                    <div class="amazingcarousel-item-container">
-<div class="amazingcarousel-image"><a href="images/five-lightbox.jpg" title="five"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/five.jpg"  alt="five" /></a></div>                    </div>
-                </li>
-                <li class="amazingcarousel-item">
-                    <div class="amazingcarousel-item-container">
-<div class="amazingcarousel-image"><a href="images/four-lightbox.jpg" title="four"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/four.jpg"  alt="four" height="347px" width="450px"/></a></div>                    </div>
-                </li>
-                <li class="amazingcarousel-item">
-                    <div class="amazingcarousel-item-container">
-<div class="amazingcarousel-image"><a href="images/six-lightbox.jpg" title="six"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/six.jpg"  alt="six" /></a></div>                    </div>
-                </li>
-            </ul>
-            <div class="amazingcarousel-prev"></div>
-            <div class="amazingcarousel-next"></div>
-        </div>
-        <div class="amazingcarousel-nav"></div>
-        <div class="amazingcarousel-engine"><a href="http://amazingcarousel.com">JavaScript Carousel</a></div>
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom02" class="fhead">Name *</label>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Name" name="name" required>
     </div>
-</div>
-    </div>
-</div>
-         <div class="skewnow"></div>
-                  <div class="healthpackage">
-                      <div class="horizontal"></div>
-         <h1 align="center" class="headinghell animated bounceInDown">Health Packages</h1>
-         <div class="skewnow2">
- <div class="container animated lightSpeedIn">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Swasth Plus - Basic Health Checkup</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            <h4>&#8377; 1399</h4>
-        </div>
-        <div class="col-md-4">
-          <h2>Swasth Plus - Advanced Health Checkup</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            <h4>&#8377; 2499</h4>
-        </div>
-        <div class="col-md-4">
-          <h2>Swasth Plus - Vitamins Package</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            <h4>&#8377; 1799</h4>
-        </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03" class="fhead">City *</label>
+      <input type="text" class="form-control" id="validationCustom03" placeholder="City" name="city" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
       </div>
-             </div>
-                      </div>
-         </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom04" class="fhead">Street *</label>
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Street" name="city" required>
+      <div class="invalid-feedback">
+        Please provide a valid state.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom05" class="fhead">Pincode *</label>
+      <input type="text" class="form-control" id="validationCustom05" pattern="[0-9]" title="Enter a valid Pincode" name="pin" placeholder="Pincode" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+  </div>
+                  
+                  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="validationCustom03" class="fhead">Date of Birth *</label>
+      <input type="date" class="form-control" id="validationCustom03" placeholder="DOB" name="dob" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom04" class="fhead">Phone No. *</label>
+      <input type="text" class="form-control" id="validationCustom04" pattern="[0-9]{10}" title="Enter a valid number" placeholder="Phone no." name="phone" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationCustom05" class="fhead">Alternate Phone No.</label>
+      <input type="text" class="form-control" id="validationCustom05" pattern="[0-9]{10}" title="Enter a valid number" placeholder="Alternate Phone No." name="aphone" >
+    </div>
+                      
+<div class="col-md-3 mb-3">
+    
+  <div >
+      <h5>Choose 1st Test</h5>
+      <select class="btn btn-secondary dropdown-toggle" name="test[]">
          
+        <option class="dropdown-item" >Sugar</option>
+        <option class="dropdown-item" >AIDS</option>
+      <option class="dropdown-item" >HDL</option>
+      <option class="dropdown-item" >LDL</option>
+      <option class="dropdown-item" >LFT</option>
+      <option class="dropdown-item" >Thyroid</option>
+      <option class="dropdown-item" >Urine Test</option>
+      <option class="dropdown-item" >Adrenal</option>
+      <option class="dropdown-item" >Leadtest</option>
+      <option class="dropdown-item" >RBC test</option>
+      <option class="dropdown-item" >Marrow Test</option>
+      <option class="dropdown-item" >Dengue</option>
+      <option class="dropdown-item" >Neuron test</option>
+      <option class="dropdown-item" >WBC test</option>     
+      <option class="dropdown-item" >Haemoglobin</option>     
+       <option class="dropdown-item" selected>None</option>
+      </select>
+  </div>
+
+    </div>
+                      
+<div class="col-md-3 mb-3">
+    
+  <div >
+      <h5>Choose 2nd Test</h5>
+      <select class="btn btn-secondary dropdown-toggle" name="test[]">
+        
+        <option class="dropdown-item" >Sugar</option>
+        <option class="dropdown-item" >AIDS</option>
+      <option class="dropdown-item" >HDL</option>
+      <option class="dropdown-item" >LDL</option>
+      <option class="dropdown-item" >LFT</option>
+      <option class="dropdown-item" >Thyroid</option>
+      <option class="dropdown-item" >Urine Test</option>
+      <option class="dropdown-item" >Adrenal</option>
+      <option class="dropdown-item" >Leadtest</option>
+      <option class="dropdown-item" >RBC test</option>
+      <option class="dropdown-item" >Marrow Test</option>
+      <option class="dropdown-item" >Dengue</option>
+      <option class="dropdown-item" >Neuron test</option>
+      <option class="dropdown-item" >WBC test</option>     
+      <option class="dropdown-item" >Haemoglobin</option>     
+       <option class="dropdown-item" selected>None</option>
+      </select>
+  </div>
+
+    </div>
+                       
+   <div class="col-md-3 mb-3">
+    
+  <div >
+      <h5>Choose 3rd Test</h5>
+      <select class="btn btn-secondary dropdown-toggle" name="test[]">
+         
+        <option class="dropdown-item" >Sugar</option>
+        <option class="dropdown-item" >AIDS</option>
+      <option class="dropdown-item" >HDL</option>
+      <option class="dropdown-item" >LDL</option>
+      <option class="dropdown-item" >LFT</option>
+      <option class="dropdown-item" >Thyroid</option>
+      <option class="dropdown-item" >Urine Test</option>
+      <option class="dropdown-item" >Adrenal</option>
+      <option class="dropdown-item" >Leadtest</option>
+      <option class="dropdown-item" >RBC test</option>
+      <option class="dropdown-item" >Marrow Test</option>
+      <option class="dropdown-item" >Dengue</option>
+      <option class="dropdown-item" >Neuron test</option>
+      <option class="dropdown-item" >WBC test</option>     
+      <option class="dropdown-item" >Haemoglobin</option>     
+       <option class="dropdown-item" selected>None</option>
+      </select>
+  </div>
+
+    </div>
+                      
+    <div class="col-md-3 mb-3">
+    
+  <div >
+      <h5>Choose 4th Test</h5>
+      <select class="btn btn-secondary dropdown-toggle" name="test[]">
+          
+        <option class="dropdown-item" >Sugar</option>
+        <option class="dropdown-item" >AIDS</option>
+      <option class="dropdown-item" >HDL</option>
+      <option class="dropdown-item" >LDL</option>
+      <option class="dropdown-item" >LFT</option>
+      <option class="dropdown-item" >Thyroid</option>
+      <option class="dropdown-item" >Urine Test</option>
+      <option class="dropdown-item" >Adrenal</option>
+      <option class="dropdown-item" >Leadtest</option>
+      <option class="dropdown-item" >RBC test</option>
+      <option class="dropdown-item" >Marrow Test</option>
+      <option class="dropdown-item" >Dengue</option>
+      <option class="dropdown-item" >Neuron test</option>
+      <option class="dropdown-item" >WBC test</option>     
+      <option class="dropdown-item" >Haemoglobin</option>     
+       <option class="dropdown-item" selected>None</option>
+      </select>
+  </div>
+
+    </div>
+                      
+                      
+  </div>
+                  
+                  
+               <center>   
+  <button class="btn btn-primary mainbut" type="submit" onclick="alert('Your report has been Submitted')">Book Test</button>
+                  </center>
+</form>
+
+        </div>
+        <div class="skewnow"></div>
          <div id="horiline2"></div>
          
          <div class="skewnow1"></div>
@@ -827,11 +920,31 @@
              <span class="fot2con">Only Pathology Reports Available online.<br></span><span class="fot2con"> For X-Ray,Ultrasound,ECG,TMT reports- please visit the concerned center where the test has been conducted.</span>
          </div>
    
-         
-         
-         
-         
-  </body>
+        
     
-    
+    </body>
 </html>
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

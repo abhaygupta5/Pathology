@@ -52,13 +52,6 @@
             background-color:black;
             color:white;
         }
- 
-
- 
-        
-
-     
-
        
         .peoplesay{
             margin-top:2%;
@@ -654,7 +647,9 @@
     filter: alpha(opacity=30);
             }
             */
-  
+            .but{
+                margin-left:15%;
+            }
             
         </style>
         
@@ -665,7 +660,7 @@
 
 
    <div class="main-image animated flipInX" style="float:left;">
-       <a href="index.php"><img src="images/logo.JPG"></a>;
+       <a href="index.php"><img src="images/logo.JPG"></a>
     </div>
          
 <div class="btn-group animated zoomInDown" role="group" aria-label="Basic example" style="top:-80px;">
@@ -678,10 +673,10 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       
-        <a class="navbar-brand animated tada" href="#"><span class="data">Patient</span></a>
-        <a class="navbar-brand animated tada" href="#"><span class="data">Book Test</span></a>
+        <a class="navbar-brand animated tada" href="index.php"><span class="data">Patient</span></a>
+        <a class="navbar-brand animated tada" href="booktest.php"><span class="data">Book Test</span></a>
         <a class="navbar-brand animated tada" href="#"><span class="data">Test List</span></a>
-        <a class="navbar-brand animated tada" href="#"><span class="data">Contact us</span></a>
+        <a class="navbar-brand animated tada" href="contact.php"><span class="data">Contact us</span></a>
       </div>
   </div>
 </nav>
@@ -691,19 +686,19 @@
 <div class="row">
   <div class="col-sm-5 animated flipInY">
     <div id="allreport">
-         <form>
+         <form method="post" action="patient_process.php">
              <h3>View all your reports</h3>
   <div class="form-group">
     <label for="exampleInputEmail1" class="formkalabel">Aadhar Card ID</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Aadhar Card ID">
+    <input type="text" class="form-control" id="exampleInputEmail1" pattern="[0-9]{12}" placeholder="Enter Aadhar Card ID" name="user">
     <small id="emailHelp" class="form-text text-muted">We'll never share your Aadhar ID with anyone else.</small>
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1" class="formkalabel">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass">
   </div>
-  
-<button type="submit" class="btn btn-primary" id="formbutton">Submit</button>
+<button class="btn btn-primary btn-lg but" type="submit">Sign In</button>
+             <a href="sign_up.php" class="btn btn-primary btn-lg but">Sign Up</a>
 </form>
 </div>
     
@@ -809,7 +804,7 @@
          <div class="fot">
              <div class="labadd1"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14671.136368119658!2d80.0251206479392!3d23.17807896598182!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xffe30099d058452e!2sIndian+Institute+of+Information+Technology+Design+%26+Manufacturing+Jabalpur!5e0!3m2!1sen!2sin!4v1507460457246" width="500" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></div>
          
-             <span id="labadd"><h2> Lab Addresses</h2></span>
+             <span id="labadd"><h2> Lab Address</h2></span>
              
              <div class="verticalline"></div>
              <span class="contact"><h2>Contact Us</h2></span>
