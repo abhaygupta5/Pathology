@@ -6,10 +6,11 @@
     $query="SELECT * FROM doc_report WHERE indicator = 0 AND User_Id='$name'";
 
     $result = mysqli_query($con,$query);
-if($result){
+
     
     while($a=mysqli_fetch_assoc($result)){
-        
+        $aadhar=$a['Aadhar_id'];
+        $test=$a['Test_Name'];
         $query="INSERT INTO sample_to_lab(User_id,date,Aadhar_id,Lab_id) SELECT '$name',CURDATE(),'$aadhar',lab.Lab_id FROM tests,lab WHERE tests.lab_Id = lab.lab_id AND Test_Name='$test'";
         mysqli_query($con,$query);
         
@@ -19,5 +20,5 @@ if($result){
     
     header("Location: sorter.php");
     exit();
-}
+
 ?>

@@ -11,8 +11,8 @@
         $rand = rand(100000,10000000);
         $aadhar=$a['Aadhar_id'];
         $test=$a['Test_Name'];
-        echo $rand." ".$aadhar." ".$test;
-        $query="INSERT INTO report(Report_Number,Obtained_Value,date,Lab_id,Test_Name) SELECT '$rand',1.5*(Max_Normal_Value - Min_Normal_Value)*RAND(),CURDATE(),'$name','$test' FROM tests WHERE lab_id = '$name' AND Test_Name='$test'";
+        
+        $query="INSERT INTO report(Report_Number,Obtained_Value,date,Lab_id,Test_Name) SELECT '$rand',1.4*(Max_Normal_Value - Min_Normal_Value)*RAND(),CURDATE(),'$name','$test' FROM tests WHERE lab_id = '$name' AND Test_Name='$test'";
         mysqli_query($con,$query);
         $query="INSERT INTO report_to_patient VALUES('$rand',NOW(),'$aadhar')";
         mysqli_query($con,$query);
