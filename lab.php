@@ -12,20 +12,21 @@
                 <div class="login"><a href="lab_login.php" >Log Out</a></div>
             </div>
         </header>
+        <br><br><br><br><br><br>
         <?php
             session_start();
             if($_SESSION['auth']==1){
-                $id = S_SESSION['user'];
-                echo '<h1>Welcome $id </h1>';
+                $id = $_SESSION['user'];
+                echo '<h1>Welcome'. $id .'</h1>';
                 $query="SELECT * FROM sample_to_lab WHERE indicator = 0 AND Lab_id =$id";
                 $result = mysqli_query($con,$query);
                 echo '<table border="1"><tr> <th>Tester Id</th>
                 <th> Aadhar Id </th> 
                 <th> Date </th></tr>';
                 while($a=mysqli_fetch_assoc($result)){
-                    echo '<tr><td>$a["User_Id"] </td>
-                    <td>$a["Aadhar_id"] </td>
-                    <td>$a["date"] </td></tr>';
+                    echo '<tr><td>'.$a["User_id"] .'</td>
+                    <td>'.$a["Aadhar_id"] .'</td>
+                    <td>'.$a["date"].' </td></tr>';
                 }
                 echo '</table>';
                 echo '<form action="complete_lab_work.php" method="POST">';

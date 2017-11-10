@@ -3,16 +3,21 @@
     session_start();
     $_SESSION['auth']=1;
     $name = $_SESSION['user'];
-    $query="SELECT * FROM sample_to_lab WHERE indicator = 0 AND Lab_Id=$name";
+    $query="SELECT S.Aadhar_id AS 'Aadhar_id',D.Test_Name AS 'Test_Name' FROM sample_to_lab AS S,doc_report AS D WHERE S.indicator = 0 AND Lab_Id='$name' AND S.User_id=D.User_Id AND S.Aadhar_id=D.Aadhar_id";
+
     $result = mysqli_query($con,$query);
     while($a=mysqli_fetch_assoc($result)){
-        $rand = rand(10000000,10000000000000);
-        $query="INSERT INTO report SELECT $rand,1.5*(Max_Normal_Value - Min_Normal_Value)*RAND(),CURDATE(),$name,$a['Test_Name'] FROM tests WHERE lab_id = $name";
+        
+        $rand = rand(100000,10000000);
+        $aadhar=$a['Aadhar_id'];
+        $test=$a['Test_Name'];
+        echo $rand." ".$aadhar." ".$test;
+        $query="INSERT INTO report(Report_Number,Obtained_Value,date,Lab_id,Test_Name) SELECT '$rand',1.5*(Max_Normal_Value - Min_Normal_Value)*RAND(),CURDATE(),'$name','$test' FROM tests WHERE lab_id = '$name' AND Test_Name='$test'";
         mysqli_query($con,$query);
-        $query="INSERT INTO report_to_patient VALUES($rand,CURDATE(),$a['Aadhar_Id'])";
+        $query="INSERT INTO report_to_patient VALUES('$rand',NOW(),'$aadhar')";
         mysqli_query($con,$query);
     }
-    $query = "UPDATE sample_to_lab SET indicator = 1 WHERE indicator = 0";
+    $query = "UPDATE sample_to_lab SET indicator = 1 WHERE indicator = 0 AND Lab_id ='$name'";
     mysqli_query($con,$query);
     
     header("Location: lab.php");

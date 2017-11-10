@@ -12,22 +12,24 @@
                 <div class="login"><a href="sorter_login.php" >Log Out</a></div>
             </div>
         </header>
+        <br><br><br><br><br><br>
         <?php
             session_start();
             if($_SESSION['auth']==1){
                 $name = $_SESSION['user'];
-                echo '<h1>Welcome $name </h1>';
-                $query="SELECT * FROM doc_report WHERE indicator = 0 AND User_Id=$name";
+                echo '<h1>Welcome '. $name .'</h1>';
+                $query="SELECT * FROM doc_report WHERE indicator = 0 AND User_Id='$name'";
                 $result = mysqli_query($con,$query);
                 echo '<table border="1"><tr> <th>Aadhar Id</th>
                 <th> Doctor Id </th> 
                 <th> Test Name </th>
                 <th> Date </th></tr>';
                 while($a=mysqli_fetch_assoc($result)){
-                    echo '<tr><td>$a["Aadhar_Id"] </td>
-                    <td>$a["D_id"] </td>
-                    <td>$a["Test_Name"] </td>
-                    <td>$a["date"] </td></tr>';
+                    
+                    echo '<tr><td>'.$a["Aadhar_id"].'</td>
+                    <td>'.$a["D_Id"].'</td>
+                    <td>'.$a["Test_Name"].'</td>
+                    <td>'.$a["date"].'</td></tr>';
                 }
                 echo '</table>';
                 echo '<form action="complete_sorter_work.php" method="POST">';

@@ -21,7 +21,7 @@
        /* Date to required format */
         $time=strtotime($dob);
         $dob=date('Y-m-d',$time);
-        echo $dob;
+        
 
 
         $query="SELECT Aadhar_id,DOB FROM patient where Aadhar_id='$aadhar' AND DOB=STR_TO_DATE('$dob','%Y-%m-%d');";

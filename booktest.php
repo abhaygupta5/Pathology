@@ -700,7 +700,7 @@
   <div class="row">
     <div class="col-md-6 mb-3">
       <label for="validationCustom01" class="fhead">Aadhar Id *</label>
-      <input type="text" class="form-control" id="validationCustom01" pattern="[0-9]{12}" title="Enter 12 digit aadhar id" placeholder="Aadhar Id" name="aadhar" required>
+      <input type="text" class="form-control" id="validationCustom01" pattern="[0-9]{12,12}" title="Enter 12 digit aadhar id" placeholder="Aadhar Id" name="aadhar" required>
     </div>
     <div class="col-md-6 mb-3">
       <label for="validationCustom02" class="fhead">Name *</label>
@@ -717,14 +717,14 @@
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom04" class="fhead">Street *</label>
-      <input type="text" class="form-control" id="validationCustom04" placeholder="Street" name="city" required>
+      <input type="text" class="form-control" id="validationCustom04" placeholder="Street" name="street" required>
       <div class="invalid-feedback">
         Please provide a valid state.
       </div>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom05" class="fhead">Pincode *</label>
-      <input type="text" class="form-control" id="validationCustom05" pattern="[0-9]" title="Enter a valid Pincode" name="pin" placeholder="Pincode" required>
+      <input type="text" class="form-control" id="validationCustom05" pattern="[0-9]{8}" title="Enter a valid Pincode" name="pin" placeholder="Pincode" required>
       <div class="invalid-feedback">
         Please provide a valid zip.
       </div>
@@ -738,18 +738,18 @@
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom04" class="fhead">Phone No. *</label>
-      <input type="text" class="form-control" id="validationCustom04" pattern="[0-9]{10}" title="Enter a valid number" placeholder="Phone no." name="phone" required>
+      <input type="text" class="form-control" id="validationCustom04" pattern="[0-9]{10,10}" title="Enter a valid number" placeholder="Phone no." name="phone" required>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom05" class="fhead">Alternate Phone No.</label>
-      <input type="text" class="form-control" id="validationCustom05" pattern="[0-9]{10}" title="Enter a valid number" placeholder="Alternate Phone No." name="aphone" >
+      <input type="text" class="form-control" id="validationCustom05" pattern="[0-9]{10,10}" title="Enter a valid number" placeholder="Alternate Phone No." name="aphone" >
     </div>
                       
 <div class="col-md-3 mb-3">
     
   <div >
       <h5>Choose 1st Test</h5>
-      <select class="btn btn-secondary dropdown-toggle" name="test[]">
+      <select class="btn btn-secondary dropdown-toggle" name="test[]" required>
          
         <option class="dropdown-item" >Sugar</option>
         <option class="dropdown-item" >AIDS</option>
@@ -765,8 +765,7 @@
       <option class="dropdown-item" >Dengue</option>
       <option class="dropdown-item" >Neuron test</option>
       <option class="dropdown-item" >WBC test</option>     
-      <option class="dropdown-item" >Haemoglobin</option>     
-       <option class="dropdown-item" selected>None</option>
+      <option class="dropdown-item" >Haemoglobin</option>
       </select>
   </div>
 
