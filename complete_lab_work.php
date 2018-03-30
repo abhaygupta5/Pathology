@@ -12,7 +12,7 @@
         $aadhar=$a['Aadhar_id'];
         $test=$a['Test_Name'];
         
-        $query="INSERT INTO report(Report_Number,Obtained_Value,date,Lab_id,Test_Name) SELECT '$rand',1.4*(Max_Normal_Value - Min_Normal_Value)*RAND(),CURDATE(),'$name','$test' FROM tests WHERE lab_id = '$name' AND Test_Name='$test'";
+        $query="INSERT INTO report(Report_Number,Obtained_Value,date,Lab_id,Test_Name) SELECT '$rand',0.9*Max_Normal_Value*RAND()+(Max_Normal_Value - Min_Normal_Value)/2,CURDATE(),'$name','$test' FROM tests WHERE lab_id = '$name' AND Test_Name='$test'";
         mysqli_query($con,$query);
         $query="INSERT INTO report_to_patient VALUES('$rand',NOW(),'$aadhar')";
         mysqli_query($con,$query);

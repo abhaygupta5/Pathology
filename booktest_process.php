@@ -13,7 +13,7 @@
     $test=$_POST['test'];
     $did=rand(1,6);
    
-    if($name!="" && $city!="" && $street!="" && $pin!=""){
+    if($name!="" && $city!="" && $street!="" && $pin!="" && $aadhar!="" && $dob!="" && $phone!=""){
         
         $time=strtotime($dob);
         $dob=date('Y-m-d',$time);

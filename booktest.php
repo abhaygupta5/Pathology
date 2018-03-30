@@ -1,4 +1,4 @@
-<?php include 'connection.php' ?>
+
 <?php 
     session_start();
     $_SESSION['auth']=0;
@@ -14,18 +14,37 @@
         <link href="css/custom.css" rel="stylesheet" type="text/css">
         <link href="css/1140.css" rel="stylesheet" type="text/css">
         <script src="js/bootstrap.js" type="text/javascript"></script>
-         <script src="carouselengine/jquery.js"></script>
-    <script src="carouselengine/amazingcarousel.js"></script>
-    <link rel="stylesheet" type="text/css" href="carouselengine/initcarousel-1.css">
-    <script src="carouselengine/initcarousel-1.js"></script>
+        
         
         <style>
         body{
             margin:0;
             padding:0;
         }
+            .pimgn1,.pimg2,.pimg3{
+                position:relative;
+                opacity: 0.70;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            
+            }
+            .pimgn1{
+                background-image: url(images/image4.jpeg);
+                min-height: 640px;
+            }
+            .pimg2{
+                background-image: url(images/image2.jpeg);
+                min-height: 700px;
+            }
+            .pimg3{
+                background-image: url(images/image3.jpeg);
+                min-height:700px;
+            }
             #na{
                 margin-top:-4%;
+                margin-bottom:-1%;
             }
         .main-image{
             width : 35%;
@@ -54,7 +73,9 @@
         }
        
         .peoplesay{
-            margin-top:2%;
+            color:white;
+            margin-top:-0.5%;
+            
         }
        .carousel-item{
     color:black;
@@ -541,32 +562,35 @@
         }
         #labadd{
             float:left;
-            position:absolute;
+            position:relative;
             margin-left:2%;
         }
         .contact{
             float:right;
             position:absolute;
             margin-left:2%;
-            
+            padding-top: 1%;
         }
         .contact1{
             float:right;
             position:absolute;
             margin-top:4%;
             margin-left:3%;
+            padding-top: 2%;
         }
              .contact2{
             float:right;
             position:absolute;
             margin-top:8%;
             margin-left:3%;
+                 padding-top: 2%;
         }
              .contact3{
             float:right;
             position:absolute;
             margin-top:12%;
             margin-left:3%;
+                 padding-top: 2%;
         }
         .labadd1{
        float:left;
@@ -583,7 +607,7 @@
             .row{
                 height:15VH;
                 width:100%;
-                background:#FFFFFF;
+            
             }
             #allreport{
                 width:100%;
@@ -621,47 +645,45 @@
             }
             .formkalabel{
                 margin-top:2%;
+                font-size:170%;
+                color:bisque;
+                font-weight: bold;
             }
      
-           /* .skewnow{
-                position:relative;
-                width:100%;
-                height:250px;
-                background:#01579B;
-                z-index: -1;
-            }
-            .skewnow:after{
-                float:right;
-                position:absolute;
-                width:100%;
-                height: 100%;
-                top:0px;
-                bottom:0px;
-                right:0px;
-                left:0px;
-                content:'';
-                background: inherit;
-                transform-origin: top left;
-                transform: skewY(4deg);
-                opacity: 0.3;
-    filter: alpha(opacity=30);
-            }
-            */
+
             .fhead{
-                font-size: 140%;
+                font-size: 160%;
+                color:floralwhite;
             }
             #mainh{
                 margin-bottom: 3%;
                 margin-top:1%;
+                padding-top: 2%;
+                color:black;
+                font-family: sans-serif;
+                
             }
             .book{
                 -webkit-animation-delay:1.5s;
                 -moz-animation-delay:1.5s;
             }
             .mainbut{
-                margin-top:4%;
-                font-size:150%;
+                margin-top:8.5%;
+                font-size:160%;
+                width:25%;
+                height:20%;
                 
+            }
+            .mpeople{
+                padding-top: 10%;
+            }
+            .dhead{
+                margin-top:3%;
+                margin-bottom:2%;
+                color:white;
+            }
+            .form-control{
+                height:50px;
             }
         </style>
         
@@ -671,7 +693,7 @@
     
     
      <div class="main-image animated flipInX" style="float:left;">
-       <a href="index.php"><img src="images/logo.JPG"></a>;
+       <a href="index.php"><img src="images/logo.JPG"></a>
     </div>
          
 <div class="btn-group animated zoomInDown" role="group" aria-label="Basic example" style="top:-80px;">
@@ -684,23 +706,23 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       
-        <a class="navbar-brand animated tada" href="index.php"><span class="data">Patient</span></a>
+        <a class="navbar-brand animated tada" href="index.php"><span class="data">Home</span></a>
         <a class="navbar-brand animated tada" href="booktest.php"><span class="data">Book Test</span></a>
-        <a class="navbar-brand animated tada" href="#"><span class="data">Test List</span></a>
+        <a class="navbar-brand animated tada" href="test.php"><span class="data">Test List</span></a>
         <a class="navbar-brand animated tada" href="contact.php"><span class="data">Contact us</span></a>
       </div>
   </div>
 </nav>
 </div>
-        
+        <div class="pimg2">
         
         <div class="book animated flipInY">
             <h1 align="center" id="mainh">Fill Details to Book Test</h1>
-              <form class="container" id="needs-validation" novalidate method="post" action="booktest_process.php">
+              <form class="container" id="needs-validation" novalidate method="post" action="booktest_process.php" name="form">
   <div class="row">
     <div class="col-md-6 mb-3">
       <label for="validationCustom01" class="fhead">Aadhar Id *</label>
-      <input type="text" class="form-control" id="validationCustom01" pattern="[0-9]{12,12}" title="Enter 12 digit aadhar id" placeholder="Aadhar Id" name="aadhar" required>
+      <input type="text" class="form-control" id="validationCustom01"  title="Enter 12 digit aadhar id" placeholder="Aadhar Id" pattern="[0-9]{12}" name="aadhar" required >
     </div>
     <div class="col-md-6 mb-3">
       <label for="validationCustom02" class="fhead">Name *</label>
@@ -724,7 +746,7 @@
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom05" class="fhead">Pincode *</label>
-      <input type="text" class="form-control" id="validationCustom05" pattern="[0-9]{8}" title="Enter a valid Pincode" name="pin" placeholder="Pincode" required>
+      <input type="text" class="form-control" id="validationCustom05" title="Enter a valid Pincode" name="pin" placeholder="Pincode"  pattern="[0-9]{8}" required>
       <div class="invalid-feedback">
         Please provide a valid zip.
       </div>
@@ -738,17 +760,17 @@
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom04" class="fhead">Phone No. *</label>
-      <input type="text" class="form-control" id="validationCustom04" pattern="[0-9]{10,10}" title="Enter a valid number" placeholder="Phone no." name="phone" required>
+      <input type="text" class="form-control" id="validationCustom04"  title="Enter a valid number" placeholder="Phone no." name="phone" pattern="[0-9]{10}"required>
     </div>
     <div class="col-md-3 mb-3">
       <label for="validationCustom05" class="fhead">Alternate Phone No.</label>
-      <input type="text" class="form-control" id="validationCustom05" pattern="[0-9]{10,10}" title="Enter a valid number" placeholder="Alternate Phone No." name="aphone" >
+      <input type="text" class="form-control" id="validationCustom05" title="Enter a valid number" placeholder="Alternate Phone No." name="aphone" pattern="[0-9]{10}" >
     </div>
                       
 <div class="col-md-3 mb-3">
     
   <div >
-      <h5>Choose 1st Test</h5>
+      <h5 class="dhead">Choose 1st Test</h5>
       <select class="btn btn-secondary dropdown-toggle" name="test[]" required>
          
         <option class="dropdown-item" >Sugar</option>
@@ -774,7 +796,7 @@
 <div class="col-md-3 mb-3">
     
   <div >
-      <h5>Choose 2nd Test</h5>
+      <h5 class="dhead">Choose 2nd Test</h5>
       <select class="btn btn-secondary dropdown-toggle" name="test[]">
         
         <option class="dropdown-item" >Sugar</option>
@@ -801,7 +823,7 @@
    <div class="col-md-3 mb-3">
     
   <div >
-      <h5>Choose 3rd Test</h5>
+      <h5 class="dhead">Choose 3rd Test</h5>
       <select class="btn btn-secondary dropdown-toggle" name="test[]">
          
         <option class="dropdown-item" >Sugar</option>
@@ -828,7 +850,7 @@
     <div class="col-md-3 mb-3">
     
   <div >
-      <h5>Choose 4th Test</h5>
+      <h5 class="dhead">Choose 4th Test</h5>
       <select class="btn btn-secondary dropdown-toggle" name="test[]">
           
         <option class="dropdown-item" >Sugar</option>
@@ -857,17 +879,17 @@
                   
                   
                <center>   
-  <button class="btn btn-primary mainbut" type="submit" onclick="alert('Your report has been Submitted')">Book Test</button>
+  <button class="btn btn-primary mainbut" type="submit" id="submit">Book Test</button>
                   </center>
 </form>
 
         </div>
-        <div class="skewnow"></div>
-         <div id="horiline2"></div>
-         
-         <div class="skewnow1"></div>
+        </div>
+     
+         <div class="pimg3">
+
          <div class="peoplesay">
-<h1>What People say about us</h1>
+<h1 class="mpeople">What People say about us</h1>
 
 <div class="content-slider">
   <div class="slider">
@@ -909,15 +931,25 @@
              <span id="labadd"><h2> Lab Address</h2></span>
              
              <div class="verticalline"></div>
-             <span class="contact"><h2>Contact Us</h2></span>
+             <a href="contact.php"> <span class="contact"><h2>Contact Us</h2></span></a>
              <span class="contact1"><h3>Abhay Gupta</h3></span>
          <span class="contact2"><h3>Shubham Kumar</h3></span>
              <span class="contact3"><h3>Abhinav Singh</h3></span>
          </div>
          <div class="fot2">
-             <span class="fot2con">&copy; 2017 CodeBros Pathology. All Rights Reserved. <br></span>
-             <span class="fot2con">Only Pathology Reports Available online.<br></span><span class="fot2con"> For X-Ray,Ultrasound,ECG,TMT reports- please visit the concerned center where the test has been conducted.</span>
+             <center><span class="fot2con">&copy; 2017 CodeBros Pathology. All Rights Reserved. <br></span></center>
+             <center>  <span class="fot2con">Only Pathology Reports Available online.<br></span><span class="fot2con"> For X-Ray,Ultrasound,ECG,TMT reports- please visit the concerned center where the test has been conducted.</span></center>
          </div>
+             
+             <script type="text/javascript">
+                 function validateForm(){
+                     var x=document.forms[]["aadhar"].value.length;
+                     if(x!=12){
+                         alert("Aadhar id must be 12 digit long");
+                         return false;
+                     }
+                 }
+             </script>
    
         
     

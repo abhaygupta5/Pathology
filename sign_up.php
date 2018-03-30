@@ -3,30 +3,55 @@
     session_start();
     $_SESSION['auth']=0;
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
     <title>
         CB Pathology
         </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
          <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link href="css/animate.css" rel="stylesheet" type="text/css">
         <link href="css/custom.css" rel="stylesheet" type="text/css">
         <link href="css/1140.css" rel="stylesheet" type="text/css">
-        <script src="js/bootstrap.js" type="text/javascript"></script>
-         <script src="carouselengine/jquery.js"></script>
-    <script src="carouselengine/amazingcarousel.js"></script>
-    <link rel="stylesheet" type="text/css" href="carouselengine/initcarousel-1.css">
-    <script src="carouselengine/initcarousel-1.js"></script>
         
         <style>
         body{
             margin:0;
             padding:0;
+            height: 100%;
+            
+            color:white;
         }
+            .pimgn1,.pimg2,.pimg3{
+                position:relative;
+                opacity: 0.70;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            
+            }
+            .pimgn1{
+                background-image: url(images/image9.jpeg);
+                min-height: 640px;
+            }
+            .pimg2{
+                background-image: url(images/image2.jpeg);
+                min-height: 700px;
+            }
+            .pimg3{
+                background-image: url(images/image3.jpeg);
+                min-height:700px;
+            }
             #na{
-                margin-top:-4%;
+                
+                margin-top:-3.5%;
+        
+                
             }
         .main-image{
             width : 35%;
@@ -39,12 +64,11 @@
             margin-top:1%;
            -webkit-animation-delay:1.5s;
             -moz-animation-delay:1.5s;
-        }
-        .data{
+            
+        }.data{
         
-            font-size: 120%;
-            margin-left:180px;
-
+            font-size: 140%;
+            color:cyan;
         }
         .b{
             font-size:125%;
@@ -55,15 +79,13 @@
         }
        
         .peoplesay{
-            margin-top:2%;
+            margin-top:0;
+            padding-top:7%;
+            color:white;
         }
-       .carousel-item{
-    color:black;
-    display:flex;
-    align-items:center;
-}
+
         h1 {
-  font-size: 60px;
+  font-size: 80px;
   text-align: center;
 }
 
@@ -519,6 +541,7 @@
         background: #E0E0E0;
             height:300px;
             width:100%;
+            color:black;
             
         }
         .verticalline{
@@ -542,32 +565,35 @@
         }
         #labadd{
             float:left;
-            position:absolute;
+            position:relative;
             margin-left:2%;
         }
         .contact{
             float:right;
             position:absolute;
             margin-left:2%;
-            
+            padding-top: 1%;
         }
         .contact1{
             float:right;
             position:absolute;
             margin-top:4%;
             margin-left:3%;
+             padding-top: 2%;
         }
              .contact2{
             float:right;
             position:absolute;
             margin-top:8%;
             margin-left:3%;
+                  padding-top: 2%;
         }
              .contact3{
             float:right;
             position:absolute;
             margin-top:12%;
             margin-left:3%;
+                  padding-top: 2%;
         }
         .labadd1{
        float:left;
@@ -578,26 +604,27 @@
             margin-top:4%;
         }
             .healthpack{
-                z-index: 1;
+    
                 float: inherit;
             }
             .row{
                 height:60VH;
                 width:100%;
-                background:#FFFFFF;
+            margin-top:-1.5%;
+                    margin-bottom: 0;
             }
             #allreport{
                 width:100%;
                 border:4px solid black;
                 margin-top:10%;
                 margin-left:20%;
-                padding: 45px;
-                padding-bottom:47px;
+                padding:17px 45px;
+                
                 
             
             }
             .healthpackage{
-                margin-top: 20%;
+                padding-top:4%;
             }
             .navbar-brand{
                 -webkit-animation-delay:2s;
@@ -610,48 +637,60 @@
             .col-sm-7{
                 -webkit-animation-delay:2.25s;
                 -moz-animation-delay:2.25s;
+
+            
             }
             .container{
                 -webkit-animation-delay:1s;
                 -moz-animation-delay:1s;
+            
             }
             .headinghell{
                 -webkit-animation-delay:1.5s;
                 -moz-animation-delay:1.5s;
                 margin-bottom:3%;
+                padding-top: 4%;
+                color:beige;
+                font-weight: bolder;
             }
             .formkalabel{
+                margin-top:2%;
+                font-size:170%;
+                color:bisque;
+                font-weight: bold;
+            }
+
+            .but{
+                margin-left:15%;
+            }
+            .cr{
+                width:80%;
+                
+                margin-left: 20%;
+                margin-top:7%;
+            }
+            p{
+                font-size:150%;
+            }
+            #formkiclass{
+                font-size:30px;
+                color:black;
+                text-align: center;
+                font-weight: bolder;
+                font-family: cursive;
+            }
+            h2{
+                color:darkblue;
+                font-weight:bold;
+                font-family: cursive;
+            }
+            .form-control{
+                height:50px;
+            }
             
-            }
-     
-           /* .skewnow{
-                position:relative;
-                width:100%;
-                height:250px;
-                background:#01579B;
-                z-index: -1;
-            }
-            .skewnow:after{
-                float:right;
-                position:absolute;
-                width:100%;
-                height: 100%;
-                top:0px;
-                bottom:0px;
-                right:0px;
-                left:0px;
-                content:'';
-                background: inherit;
-                transform-origin: top left;
-                transform: skewY(4deg);
-                opacity: 0.3;
-    filter: alpha(opacity=30);
-            }
-            */
             .form-group{
                 margin:-15px 0;
             }
-            
         </style>
         
     </head>
@@ -674,25 +713,25 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       
-        <a class="navbar-brand animated tada" href="index.php"><span class="data">Patient</span></a>
+        <a class="navbar-brand animated tada" href="index.php"><span class="data">Home</span></a>
         <a class="navbar-brand animated tada" href="booktest.php"><span class="data">Book Test</span></a>
-        <a class="navbar-brand animated tada" href="#"><span class="data">Test List</span></a>
+        <a class="navbar-brand animated tada" href="test.php"><span class="data">Test List</span></a>
         <a class="navbar-brand animated tada" href="contact.php"><span class="data">Contact us</span></a>
       </div>
   </div>
 </nav>
 </div>
          
-
+<div class="pimgn1">
 <div class="row">
   <div class="col-sm-5 animated flipInY">
     <div id="allreport">
          <form action="sign_up_process.php" method="POST">
-             <h3>Sign Up</h3>
+             <span id="formkiclass">Sign Up</span>
   <div class="form-group">
     <label for="exampleInputEmail1" class="formkalabel">Aadhar Card ID *</label>
-    <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter Aadhar Card ID" pattern="[0-9]{12}" name="aadhar">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your Aadhar ID with anyone else.</small>
+    <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Enter Aadhar Card ID" pattern="[0-9]{12}" title="Aadhar id should be 12 digits long" name="aadhar">
+    
   </div>
              <div class="form-group">
     <label for="exampleDate" class="formkalabel">Date of Birth *</label>
@@ -708,72 +747,91 @@
     <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password" name="cpass">
   </div>
   
-<button type="submit" class="btn btn-primary" id="formbutton">Sign Up</button>
+<button type="submit" class="btn btn-primary" id="formbutton" onclick="alert('You have successfully Signed Up');">Sign Up</button>
 </form>
 </div>
     
     </div>
+
   <div class="col-sm-7 animated flipInX">
-   <div id="amazingcarousel-container-1" style="height:60VH">
-    <div id="amazingcarousel-1" style="display:none;position:relative;width:100%;max-width:520px;margin:0px auto 0px;">
-        <div class="amazingcarousel-list-container">
-            <ul class="amazingcarousel-list">
-                <li class="amazingcarousel-item">
-                    <div class="amazingcarousel-item-container">
-<div class="amazingcarousel-image"><a href="images/five-lightbox.jpg" title="five"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/five.jpg"  alt="five" /></a></div>                    </div>
-                </li>
-                <li class="amazingcarousel-item">
-                    <div class="amazingcarousel-item-container">
-<div class="amazingcarousel-image"><a href="images/four-lightbox.jpg" title="four"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/four.jpg"  alt="four" height="347px" width="450px"/></a></div>                    </div>
-                </li>
-                <li class="amazingcarousel-item">
-                    <div class="amazingcarousel-item-container">
-<div class="amazingcarousel-image"><a href="images/six-lightbox.jpg" title="six"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/six.jpg"  alt="six" /></a></div>                    </div>
-                </li>
-            </ul>
-            <div class="amazingcarousel-prev"></div>
-            <div class="amazingcarousel-next"></div>
-        </div>
-        <div class="amazingcarousel-nav"></div>
-        <div class="amazingcarousel-engine"><a href="http://amazingcarousel.com">JavaScript Carousel</a></div>
+      <div class="cr">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+    <!-- Indicators -->
+    <ol class="carousel-indicators" >
+      <li data-target="#carousel-example-generic" data-slide-to="0"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item">
+        <img src="images/five.jpeg" alt="...">
+      </div>
+      <div class="item active">
+        <img src="images/four.jpeg" alt="...">
+      </div>
+      <div class="item">
+        <img src="images/six.jpeg" alt="...">
+      </div>
     </div>
-</div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+      </div>
+      </div>
     </div>
-</div>
-         <div class="skewnow"></div>
+    
+    </div>
+    
+         
+    
+ 
+         
+         <div class="pimg2" >
+         
                   <div class="healthpackage">
-                      <div class="horizontal"></div>
+                      
          <h1 align="center" class="headinghell animated bounceInDown">Health Packages</h1>
          <div class="skewnow2">
  <div class="container animated lightSpeedIn">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>Swasth Plus - Basic Health Checkup</h2>
+            <b><h2>Swasth Plus - Basic Health Checkup</h2></b>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            <h4>&#8377; 1399</h4>
+            <h3>&#8377; 1399</h3>
         </div>
         <div class="col-md-4">
-          <h2>Swasth Plus - Advanced Health Checkup</h2>
+            <b> <h2>Swasth Plus - Advanced Health Checkup</h2></b>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            <h4>&#8377; 2499</h4>
+            <h3>&#8377; 2499</h3>
         </div>
         <div class="col-md-4">
-          <h2>Swasth Plus - Vitamins Package</h2>
+            <b><h2>Swasth Plus - Vitamins Package</h2></b>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-            <h4>&#8377; 1799</h4>
+            <h3>&#8377; 1799</h3>
         </div>
       </div>
              </div>
                       </div>
          </div>
+         </div>
          
-         <div id="horiline2"></div>
-         
-         <div class="skewnow1"></div>
+    
+         <div class="pimg3">
+
          <div class="peoplesay">
 <h1>What People say about us</h1>
 
@@ -809,7 +867,7 @@
          </div>
          
          
-         <div id="horiline3"></div>
+         
          
          <div class="fot">
              <div class="labadd1"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14671.136368119658!2d80.0251206479392!3d23.17807896598182!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xffe30099d058452e!2sIndian+Institute+of+Information+Technology+Design+%26+Manufacturing+Jabalpur!5e0!3m2!1sen!2sin!4v1507460457246" width="500" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></div>
@@ -817,20 +875,22 @@
              <span id="labadd"><h2> Lab Address</h2></span>
              
              <div class="verticalline"></div>
-             <span class="contact"><h2>Contact Us</h2></span>
+             <a href="contact.php"><span class="contact"><h2>Contact Us</h2></span></a>
              <span class="contact1"><h3>Abhay Gupta</h3></span>
          <span class="contact2"><h3>Shubham Kumar</h3></span>
              <span class="contact3"><h3>Abhinav Singh</h3></span>
          </div>
          <div class="fot2">
-             <span class="fot2con">&copy; 2017 CodeBros Pathology. All Rights Reserved. <br></span>
-             <span class="fot2con">Only Pathology Reports Available online.<br></span><span class="fot2con"> For X-Ray,Ultrasound,ECG,TMT reports- please visit the concerned center where the test has been conducted.</span>
+             <center> <span class="fot2con">&copy; 2017 CodeBros Pathology. All Rights Reserved. <br></span></center>
+             <center> <span class="fot2con">Only Pathology Reports Available online.<br></span><span class="fot2con"> For X-Ray,Ultrasound,ECG,TMT reports- please visit the concerned center where the test has been conducted.</span></center>
          </div>
    
+         </div>
          
          
-         
-         
+          
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
   </body>
     
     

@@ -1,30 +1,15 @@
 <?php include 'connection.php' ?>
-<?php 
-    session_start();
-    $_SESSION['auth']=0;
-?>
-<!DOCTYPE html>
+
 <html>
-    <head>
-    <title>
-        CB Pathology
-        </title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width , initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-         <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <link href="css/animate.css" rel="stylesheet" type="text/css">
-        <link href="css/custom.css" rel="stylesheet" type="text/css">
-        <link href="css/1140.css" rel="stylesheet" type="text/css">
-        
-        <style>
-        body{
+<head>
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+    <style>
+     body{
             margin:0;
             padding:0;
-            height: 100%;
-            
-            color:white;
         }
             .pimgn1,.pimg2,.pimg3{
                 position:relative;
@@ -36,7 +21,7 @@
             
             }
             .pimgn1{
-                background-image: url(images/image9.jpeg);
+                background-image: url(images/image4.jpeg);
                 min-height: 640px;
             }
             .pimg2{
@@ -48,10 +33,8 @@
                 min-height:700px;
             }
             #na{
-                
-                margin-top:-3.5%;
-        
-                
+                margin-top:-4%;
+                margin-bottom:-1%;
             }
         .main-image{
             width : 35%;
@@ -64,11 +47,12 @@
             margin-top:1%;
            -webkit-animation-delay:1.5s;
             -moz-animation-delay:1.5s;
-            
-        }.data{
+        }
+        .data{
         
-            font-size: 140%;
-            color:cyan;
+            font-size: 120%;
+            margin-left:180px;
+
         }
         .b{
             font-size:125%;
@@ -79,13 +63,16 @@
         }
        
         .peoplesay{
-            margin-top:0;
-            padding-top:7%;
             color:white;
+            margin-top:-0.5%;
         }
-
+       .carousel-item{
+    color:black;
+    display:flex;
+    align-items:center;
+}
         h1 {
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
 }
 
@@ -541,7 +528,6 @@
         background: #E0E0E0;
             height:300px;
             width:100%;
-            color:black;
             
         }
         .verticalline{
@@ -565,35 +551,32 @@
         }
         #labadd{
             float:left;
-            position:relative;
+            position:absolute;
             margin-left:2%;
         }
         .contact{
             float:right;
             position:absolute;
             margin-left:2%;
-            padding-top: 1%;
+            
         }
         .contact1{
             float:right;
             position:absolute;
             margin-top:4%;
             margin-left:3%;
-             padding-top: 2%;
         }
              .contact2{
             float:right;
             position:absolute;
             margin-top:8%;
             margin-left:3%;
-                  padding-top: 2%;
         }
              .contact3{
             float:right;
             position:absolute;
             margin-top:12%;
             margin-left:3%;
-                  padding-top: 2%;
         }
         .labadd1{
        float:left;
@@ -604,14 +587,13 @@
             margin-top:4%;
         }
             .healthpack{
-    
+                z-index: 1;
                 float: inherit;
             }
             .row{
-                height:60VH;
+                height:15VH;
                 width:100%;
-            margin-top:-1.5%;
-                    margin-bottom: 0;
+            
             }
             #allreport{
                 width:100%;
@@ -624,7 +606,7 @@
             
             }
             .healthpackage{
-                padding-top:4%;
+                margin-top: 20%;
             }
             .navbar-brand{
                 -webkit-animation-delay:2s;
@@ -637,64 +619,61 @@
             .col-sm-7{
                 -webkit-animation-delay:2.25s;
                 -moz-animation-delay:2.25s;
-
-            
             }
             .container{
                 -webkit-animation-delay:1s;
                 -moz-animation-delay:1s;
-            
             }
             .headinghell{
                 -webkit-animation-delay:1.5s;
                 -moz-animation-delay:1.5s;
                 margin-bottom:3%;
-                padding-top: 4%;
-                color:beige;
-                font-weight: bolder;
             }
             .formkalabel{
                 margin-top:2%;
-                font-size:170%;
-                color:bisque;
-                font-weight: bold;
             }
+     
 
-            .but{
-                margin-left:15%;
+            .fhead{
+                font-size: 140%;
+                color:floralwhite;
             }
-            .cr{
-                width:80%;
-                
-                margin-left: 20%;
+            #mainh{
+                margin-bottom: 3%;
+                margin-top:1%;
+                color:red;
+            }
+            .book{
+                -webkit-animation-delay:1.5s;
+                -moz-animation-delay:1.5s;
+            }
+            .mainbut{
                 margin-top:7%;
-            }
-            p{
                 font-size:150%;
+                
             }
-            #formkiclass{
-                font-size:40px;
-                color:black;
-                text-align: center;
-                font-weight: bolder;
-                font-family: cursive;
+            .mpeople{
+                padding-top: 10%;
             }
-            h2{
-                color:darkblue;
-                font-weight:bold;
-                font-family: cursive;
+            .dhead{
+                margin-top:3%;
+                margin-bottom:2%;
+                color:white;
             }
-            .form-control{
-                height:50px;
-            }
-        </style>
-        
-    </head>
-        
-     <body>
-
-
-
+        .table{
+            margin-top:5%;
+        }
+        .footer{
+            background-color: black;
+            color:white;
+            margin-top:8.75%;
+        }
+    
+    
+    </style>
+    
+</head>
+<body>
    <div class="main-image animated flipInX" style="float:left;">
        <a href="index.php"><img src="images/logo.JPG"></a>
     </div>
@@ -717,174 +696,55 @@
   </div>
 </nav>
 </div>
-         
-<div class="pimgn1">
-<div class="row">
-  <div class="col-sm-5 animated flipInY">
-    <div id="allreport">
-         <form method="post" action="patient_process.php">
-             <span id="formkiclass">View all your reports</span>
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="formkalabel">Aadhar Card ID *</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" pattern="[0-9]{12}" placeholder="Enter Aadhar Card ID" name="user">
-   
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1" class="formkalabel">Password *</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass">
-  </div>
-<button class="btn btn-primary btn-lg but" type="submit">Sign In</button>
-             <a href="sign_up.php" class="btn btn-primary btn-lg but">Sign Up</a>
-</form>
-</div>
-    
-    </div>
-
-  <div class="col-sm-7 animated flipInX">
-      <div class="cr">
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
-    <!-- Indicators -->
-    <ol class="carousel-indicators" >
-      <li data-target="#carousel-example-generic" data-slide-to="0"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item">
-        <img src="images/five.jpeg" alt="...">
-      </div>
-      <div class="item active">
-        <img src="images/four.jpeg" alt="...">
-      </div>
-      <div class="item">
-        <img src="images/six.jpeg" alt="...">
-      </div>
-    </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-      </div>
-      </div>
-    </div>
-    
-    </div>
-    
-         
-    
- 
-         
-         <div class="pimg2" >
-         
-                  <div class="healthpackage">
-                      
-         <h1 align="center" class="headinghell animated bounceInDown">Health Packages</h1>
-         <div class="skewnow2">
- <div class="container animated lightSpeedIn">
-      <!-- Example row of columns -->
-     <form method="post" action="pack.php"> 
-     <div class="row">
-          
-        <div class="col-md-4">
-            
-            <b><h2>Swasth Plus - Basic Health Checkup</h2></b>
-          <p>This is a basic health Check Up. It includes test like Haemoglobin, RBC Test, WBC Test, Urine Test and Sugar.</p>
-          <p><input type="submit" class="btn btn-secondary" name="basic" value="View details &raquo;"></p>
-            <h3>&#8377; 2499</h3>
-          
-        </div>
+<br><br><br><br>
+<?php
+    echo "<form method='post' action='booktest-pack.php'>";
+    if(isset($_POST["basic"])){
         
-        <div class="col-md-4">
-            <b> <h2>Swasth Plus - Medium Health Checkup</h2></b>
-          <p>This is a medium level health Check up. It includes tests like LFT, Thyroid, HDL and LDL.</p>
-          <p><input type="submit" class="btn btn-secondary" name="medium" value="View details &raquo;"></p>
-            <h3>&#8377; 1899</h3>
-        </div>
-        <div class="col-md-4">
-            <b><h2>Swasth Plus - Advanced Health Checkup</h2></b>
-          <p>This is an advance level health check up. It includes big tests like Bone Marrow test and Neuron test.</p>
-          <p><input type="submit" class="btn btn-secondary" name="advance" value="View details &raquo;"></p>
-            <h3>&#8377; 2099</h3>
-        </div>
+        $query="SELECT Test_Name,Test_type, Description FROM tests WHERE Test_Name IN ('Haemoglobin','RBC test','WBC test','Urine test','Sugar');";
+        $res=mysqli_query($con,$query);
+        while($a=mysqli_fetch_assoc($res)){
+            echo "<br><h1>".$a['Test_Name']." ( ".$a['Test_type']." )<h1>";
+            echo "<h4>".$a['Description']."</h4>";
+        }
+            
+        echo "<center><button type='submit' class='btn btn-primary mainbut' value='basic' name='pack'>Book a test</button></center>";
+    }
+    else if(isset($_POST["medium"])){
+        
+        $query="SELECT Test_Name,Test_type, Description FROM tests WHERE Test_Name IN ('LFT','Thyroid','HDL','LDL');";
+        $res=mysqli_query($con,$query);
+        while($a=mysqli_fetch_assoc($res)){
+            echo "<br><h1>".$a['Test_Name']." ( ".$a['Test_type']." )<h1>";
+            echo "<h4>".$a['Description']."</h4>";
+        }
+        
+       
+        echo "<center><button type='submit' class='btn btn-primary mainbut' value='medium' name='pack'>Book a test</button></center>";
+    }
+    else{
+        
+        $query="SELECT Test_Name,Test_type, Description FROM tests WHERE Test_Name IN ('Marrow Test','Neuron test');";
+        $res=mysqli_query($con,$query);
+        while($a=mysqli_fetch_assoc($res)){
+            echo "<br><h1>".$a['Test_Name']." ( ".$a['Test_type']." )<h1>";
+            echo "<h4>".$a['Description']."</h4>";
+        }
+        
+        echo "<center><button type='submit' class='btn btn-primary mainbut' value='advance' name='pack'>Book a test</button></center>";
+    }
+    echo "</form>";
+ ?>
+    
+         
+            
+         
+    <footer class="footer">
+      <div class="container">
+          <center> <span class="fot2con">&copy; 2017 CodeBros Pathology. All Rights Reserved. <br></span></center>
+          <center> <span class="fot2con">Only Pathology Reports Available online.<br></span><span class="fot2con"> For X-Ray,Ultrasound,ECG,TMT reports- please visit the concerned center where the test has been conducted.</span></center>
       </div>
-     </form>
-             </div>
-                      </div>
-         </div>
-         </div>
-         
-    
-         <div class="pimg3">
-
-         <div class="peoplesay">
-<h1>What People say about us</h1>
-
-<div class="content-slider">
-  <div class="slider">
-    <div class="mask">
-      <ul>
-        <li class="anim1">
-          <div class="quote">Best service provider center in diagnostic at Tapukara, Khuskhera area , good communication staff here.</div>
-          <div class="source">- R K Jain, Navi Mumbai (Maharashtra)</div>
-        </li>
-        <li class="anim2">
-          <div class="quote">I occur then after taking a sample this center is good working staff & best service at reporting time. Home collection facility available in emergency time..</div>
-          <div class="source">- Dr. Awasthi (Lucknow)</div>
-        </li>
-        <li class="anim3">
-          <div class="quote"> Thank you for your exceptional service through which you sent us alert message on mobile to take her to hospital even before we received the results of report.</div>
-          <div class="source">- Rahul (Dhoopchandi, Distt. - Varanasi)</div>
-        </li>
-        <li class="anim4">
-          <div class="quote">Good staff ,no pain when blood given, very clean atmosphere in lab .</div>
-          <div class="source">- Jitendra Jangir (Bhiwadi, Alwar)</div>
-        </li>
-       <li class="anim5">
-          <div class="quote">I shall always remain grateful to you sir for saving the life of my wife . Had your lab not sent me SOS message yesterday, perhaps I would have lost my wife, Poonam Tuli.</div>
-          <div class="source">- Col C J Tuli (New Delhi)</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-              
-         </div>
-         
-         
-         
-         
-         <div class="fot">
-             <div class="labadd1"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14671.136368119658!2d80.0251206479392!3d23.17807896598182!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xffe30099d058452e!2sIndian+Institute+of+Information+Technology+Design+%26+Manufacturing+Jabalpur!5e0!3m2!1sen!2sin!4v1507460457246" width="500" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-         
-             <span id="labadd"><h2> Lab Address</h2></span>
-             
-             <div class="verticalline"></div>
-             <a href="contact.php"><span class="contact"><h2>Contact Us</h2></span></a>
-             <span class="contact1"><h3>Abhay Gupta</h3></span>
-         <span class="contact2"><h3>Shubham Kumar</h3></span>
-             <span class="contact3"><h3>Abhinav Singh</h3></span>
-         </div>
-         <div class="fot2">
-             <center> <span class="fot2con">&copy; 2017 CodeBros Pathology. All Rights Reserved. <br></span></center>
-             <center> <span class="fot2con">Only Pathology Reports Available online.<br></span><span class="fot2con"> For X-Ray,Ultrasound,ECG,TMT reports- please visit the concerned center where the test has been conducted.</span></center>
-         </div>
-   
-         </div>
-         
-         
-          
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
-  </body>
-    
+    </footer>
+    </body>
     
 </html>
